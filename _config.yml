@@ -1,0 +1,14 @@
+# Minimal Jekyll configuration for ur2nlp lab website
+
+# Site information
+title: "ur2nlp"
+description: "University of Rochester Under-Resourced NLP Lab"
+url: "https://ur2nlp.github.io"
+
+# Build settings
+markdown: kramdown
+
+# Exclude files from Jekyll processing
+exclude:
+  - README.md
+  - .claude/

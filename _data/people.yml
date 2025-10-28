@@ -1,0 +1,18 @@
+# Lab members data
+# Each new lab member adds their information here as a YAML entry
+# Jekyll will automatically generate their card on the website
+
+pi:
+  - name: "C.M. Downey"
+    role: "Assistant Professor"
+    affiliation: "Linguistics and Data Science"
+    website: "https://cmdowney88.github.io"
+
+# Current lab members
+# To add yourself, copy this template and fill in your information:
+members:
+  # - name: "Your Name"
+  #   role: "PhD Student / Postdoc / MS Student / Undergrad"
+  #   interests: "Brief description of your research interests"
+  #   website: "https://yourwebsite.com"  # optional
+  #   email: "youremail@rochester.edu"     # optional

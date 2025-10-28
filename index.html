@@ -1,0 +1,229 @@
+---
+# Jekyll front matter - required for Jekyll to process this file
+# Empty front matter is fine - it just signals "process this with Liquid"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }} - {{ site.description }}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link href="lab.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="70">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar" style="background-color: #001E5F;">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#top">
+                <span class="lab-name">ur2nlp</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#people">People</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#join">Join Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="top" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h1 class="display-4 font-weight-bold">UR2NLP</h1>
+                    <p class="lead">University of Rochester Under-Resourced NLP Lab</p>
+                    <p class="mt-4">Advancing language technology for the world's under-resourced languages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="section-title">About</h2>
+                    <p class="lead">
+                        The UR2NLP lab focuses on developing computational methods for languages
+                        with limited digital resources and training data. Our research spans multilingual
+                        language modeling, low-resource adaptation, and applications to language documentation
+                        and revitalization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- People Section -->
+    <section id="people" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">People</h2>
+
+            <h4 class="mb-4">Principal Investigator</h4>
+            <div class="row mb-5">
+                {% for person in site.data.people.pi %}
+                <div class="col-md-4 mb-4">
+                    <div class="card person-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ person.name }}</h5>
+                            <p class="card-text text-muted">{{ person.role }}</p>
+                            <p class="card-text">{{ person.affiliation }}</p>
+                            <a href="{{ person.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Personal Website</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <h4 class="mb-4">Lab Members</h4>
+            <div class="row">
+                {% for member in site.data.people.members %}
+                <div class="col-md-4 mb-4">
+                    <div class="card person-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ member.name }}</h5>
+                            <p class="card-text text-muted">{{ member.role }}</p>
+                            <p class="card-text">{{ member.interests }}</p>
+                            {% if member.website %}
+                            <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Website</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title text-center">Projects</h2>
+            <div class="row">
+                {% for project in site.data.projects %}
+                <div class="col-md-6 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ project.title }}</h4>
+                            <p class="card-text">{{ project.description }}</p>
+                            {% if project.tags %}
+                            <div class="mt-3">
+                                {% for tag in project.tags %}
+                                {% if forloop.first %}
+                                <span class="badge badge-primary">{{ tag }}</span>
+                                {% else %}
+                                <span class="badge badge-secondary">{{ tag }}</span>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Publications</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="text-center text-muted mb-4">
+                        For a complete list of publications, see lab members' individual pages.
+                    </p>
+
+                    {% if site.data.publications.size > 0 %}
+                    <h4 class="mt-4 mb-3">Selected Recent Publications</h4>
+                    <ul class="publication-list">
+                        {% for pub in site.data.publications %}
+                        <li class="mb-3">
+                            <strong>{{ pub.title }}</strong><br>
+                            <span class="text-muted">{{ pub.authors }}</span><br>
+                            <em>{{ pub.venue }}, {{ pub.year }}</em><br>
+                            {% if pub.paper_url %}
+                            <a href="{{ pub.paper_url }}" class="badge badge-primary">Paper</a>
+                            {% endif %}
+                            {% if pub.code_url %}
+                            <a href="{{ pub.code_url }}" class="badge badge-secondary">Code</a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="section-title">Join Us</h2>
+                    <p class="lead">
+                        We're always looking for motivated students interested in multilingual NLP
+                        and under-resourced language technology.
+                    </p>
+                    <div class="mt-4">
+                        <h5>Prospective Students</h5>
+                        <p>
+                            If you're interested in joining the lab as a PhD student, I'm currently
+                            accepting students to the
+                            <a href="https://www.sas.rochester.edu/lin/graduate/phd.html" target="_blank" rel="noopener noreferrer">PhD in Linguistics</a>.
+                            Please mention Professor Downey and/or UR2NLP in your application.
+                        </p>
+
+                        <h5 class="mt-4">Current UR Students</h5>
+                        <p>
+                            Undergraduate and MS students interested in research opportunities are
+                            encouraged to reach to c DOT m DOT downey AT rochester DOT edu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="text-muted">
+                UR2NLP Lab &middot; University of Rochester
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
