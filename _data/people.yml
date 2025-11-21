@@ -16,3 +16,6 @@ members:
   #   interests: "Brief description of your research interests"
   #   website: "https://yourwebsite.com"  # optional
   #   email: "youremail@rochester.edu"     # optional
+  - name: "Robert J. Chen"
+    role: "MS Student"
+    interests: "Multilingual speech technology, targeted transfer learning"
