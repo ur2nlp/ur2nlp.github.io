@@ -18,7 +18,7 @@
 
 <body data-spy="scroll" data-target="#navbar" data-offset="70">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar" style="background-color: #001E5F;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar" style="background-color: #252525;">
         <div class="container">
             <a class="navbar-brand font-weight-bold" href="#top">
                 <span class="lab-name">ur2nlp</span>
@@ -30,6 +30,9 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#people">People</a>
@@ -68,23 +71,60 @@
                 <div class="col-lg-10 mx-auto">
                     <h2 class="section-title">About</h2>
                     <p class="lead">
-                        The UR2NLP lab focuses on developing computational methods for languages
-                        with limited digital resources and training data. Our research spans multilingual
-                        language modeling, low-resource adaptation, and applications to language documentation
-                        and revitalization.
+                        We develop methods to improve NLP tools for low-resource languages—those
+                        lacking the abundant data needed to train modern machine learning models.
                     </p>
+                    <p>
+                        Most ML approaches require vast amounts of text (hundreds of gigabytes),
+                        available only for high-resource languages like English and Chinese. This
+                        leaves the majority of the world's languages behind, undermining the vital
+                        role these systems can play in tools like keyboard autocorrect, speech
+                        recognition, and machine translation—tools that help languages thrive in
+                        the digital era.
+                    </p>
+                    <p>
+                        To address this gap, we focus on machine learning techniques that work with limited data:
+                    </p>
+                    <ul>
+                        <li><strong>Unsupervised/self-supervised learning</strong> — training with raw text or much smaller amounts of specialized data</li>
+                        <li><strong>Multilingual modeling</strong> — pooling language data by training on multiple languages at once</li>
+                        <li><strong>Transfer learning</strong> — leveraging models from higher-resource languages for new, low-resource ones</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- News Section -->
+    <section id="news" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">News</h2>
+            <div class="row">
+                {% assign sorted_news = site.data.news | sort: "date" | reverse %}
+                {% for item in sorted_news limit:4 %}
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card news-card h-100">
+                        <div class="card-body">
+                            <span class="badge badge-date mb-2">{{ item.date | date: "%b %Y" }}</span>
+                            <h5 class="card-title">{{ item.title }}</h5>
+                            <p class="card-text">{{ item.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+                            {% if item.link %}
+                            <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Read more</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
     <!-- People Section -->
-    <section id="people" class="bg-light">
+    <section id="people">
         <div class="container">
             <h2 class="section-title text-center">People</h2>
 
-            <h4 class="mb-4">Principal Investigator</h4>
-            <div class="row mb-5">
+            <div class="row">
                 {% for person in site.data.people.pi %}
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
@@ -97,16 +137,14 @@
                     </div>
                 </div>
                 {% endfor %}
-            </div>
-
-            <h4 class="mb-4">Lab Members</h4>
-            <div class="row">
-                {% for member in site.data.people.members %}
+                {% if site.data.people.phd_students %}
+                {% assign sorted_phd = site.data.people.phd_students | sort: "name" %}
+                {% for member in sorted_phd %}
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
                         <div class="card-body">
                             <h5 class="card-title">{{ member.name }}</h5>
-                            <p class="card-text text-muted">{{ member.role }}</p>
+                            <p class="card-text text-muted">PhD Student</p>
                             <p class="card-text">{{ member.interests }}</p>
                             {% if member.website %}
                             <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Website</a>
@@ -115,12 +153,30 @@
                     </div>
                 </div>
                 {% endfor %}
+                {% endif %}
+                {% if site.data.people.ms_students %}
+                {% assign sorted_ms = site.data.people.ms_students | sort: "name" %}
+                {% for member in sorted_ms %}
+                <div class="col-md-4 mb-4">
+                    <div class="card person-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ member.name }}</h5>
+                            <p class="card-text text-muted">MS Student</p>
+                            <p class="card-text">{{ member.interests }}</p>
+                            {% if member.website %}
+                            <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Website</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="bg-light">
         <div class="container">
             <h2 class="section-title text-center">Projects</h2>
             <div class="row">
@@ -150,7 +206,7 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="bg-light">
+    <section id="publications">
         <div class="container">
             <h2 class="section-title text-center">Publications</h2>
             <div class="row">
@@ -189,8 +245,7 @@
                 <div class="col-lg-10 mx-auto text-center">
                     <h2 class="section-title">Join Us</h2>
                     <p class="lead">
-                        We're always looking for motivated students interested in multilingual NLP
-                        and under-resourced language technology.
+                        We're always looking for students motivated by low-resource language technology!
                     </p>
                     <div class="mt-4">
                         <h5>Prospective Students</h5>
@@ -204,7 +259,7 @@
                         <h5 class="mt-4">Current UR Students</h5>
                         <p>
                             Undergraduate and MS students interested in research opportunities are
-                            encouraged to reach to c DOT m DOT downey AT rochester DOT edu.
+                            encouraged to reach to c.m.downey@rochester.edu
                         </p>
                     </div>
                 </div>

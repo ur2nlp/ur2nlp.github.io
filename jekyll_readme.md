@@ -13,9 +13,8 @@ Instead of editing HTML every time a lab member joins, you edit a simple YAML da
 
 ```yaml
 # _data/people.yml
-members:
+phd_students:
   - name: "Jane Doe"
-    role: "PhD Student"
     interests: "Multilingual morphology"
     website: "https://janedoe.com"
 ```
@@ -43,15 +42,16 @@ That's the entire site. No `_layouts/`, no `_includes/`, no Sass compilation, no
 ### Adding a Lab Member
 
 1. Edit `_data/people.yml`
-2. Add a new entry under `members:`:
+2. Add a new entry under the appropriate section (`phd_students:` or `ms_students:`):
 
 ```yaml
-members:
+phd_students:
   - name: "Your Name"
-    role: "PhD Student"
     interests: "Your research interests"
     website: "https://yoursite.com"  # optional
 ```
+
+Your role is determined by which section you're in. People display in order: PI, PhD students (alphabetical), MS students (alphabetical).
 
 3. Commit and push. GitHub Pages rebuilds automatically.
 

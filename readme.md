@@ -56,15 +56,21 @@ All website content lives in the `_data/` folder. Edit the file that matches wha
 
 **Adding yourself to the People section:**
 
-Edit `_data/people.yml` and add your information under the `members:` section:
+Edit `_data/people.yml` and add your information under the appropriate section based on your role:
 
 ```yaml
-members:
+phd_students:
   - name: "Your Name"
-    role: "PhD Student"  # or "Postdoc", "MS Student", "Undergrad", etc.
+    interests: "Brief description of your research interests"
+    website: "https://yourwebsite.com"  # optional
+
+ms_students:
+  - name: "Your Name"
     interests: "Brief description of your research interests"
     website: "https://yourwebsite.com"  # optional
 ```
+
+Your role (PhD Student, MS Student) is determined by which section you're in. People are displayed in order: PI first, then PhD students (alphabetically), then MS students (alphabetically).
 
 **Adding a project:**
 
@@ -164,16 +170,16 @@ website: "https://example.com"  # Better
 
 **Wrong indentation:**
 ```yaml
-members:
+phd_students:
 - name: "Jane"  # Too far left - needs to be indented
-  role: "PhD Student"
+  interests: "Multilingual NLP"
 ```
 
 Should be:
 ```yaml
-members:
+phd_students:
   - name: "Jane"
-    role: "PhD Student"
+    interests: "Multilingual NLP"
 ```
 
 ### I Made a Mistake in My Branch

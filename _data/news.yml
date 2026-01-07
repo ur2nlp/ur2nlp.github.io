@@ -1,0 +1,33 @@
+# Lab News
+# Add new items at the top of the list (most recent first)
+# Only the first 4 items will be displayed on the homepage
+#
+# Fields:
+#   date: YYYY-MM-DD format
+#   title: Short headline
+#   summary: Brief description (1-2 sentences)
+#   link: (optional) URL for more information
+
+- date: 2025-12-19
+  title: "Empire AI Compute Allocation Awarded"
+  summary: "Our project on rapid adaptation of ASR models in data-scarce scenarios received 5,000 service units on [Empire AI](https://www.empireai.edu/) Beta."
+
+- date: 2025-08-25
+  title: "New Lab Member"
+  summary: "Welcome to Ifeoma Okoh, a new PhD student working on low-resource NLP!"
+
+# Example entries (uncomment and modify as needed):
+#
+# - date: 2025-01-15
+#   title: "Paper Accepted at ACL 2025"
+#   summary: "Our work on multilingual vocabulary adaptation has been accepted to ACL 2025."
+#   link: "https://arxiv.org/abs/..."
+#
+# - date: 2025-01-10
+#   title: "New Lab Member"
+#   summary: "Welcome to Jane Doe, who joins us as a PhD student working on low-resource MT."
+#
+# - date: 2024-12-01
+#   title: "Talk at EMNLP 2024"
+#   summary: "Prof. Downey presented our findings on targeted multilingual adaptation at EMNLP in Miami."
+#   link: "https://aclanthology.org/..."
