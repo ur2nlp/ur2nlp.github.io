@@ -9,9 +9,9 @@ pi:
     website: "https://cmdowney88.github.io"
 
 phd_students:
-  # - name: "Your Name"
-  #   interests: "Brief description of your research interests"
-  #   website: "https://yourwebsite.com"  # optional
+   - name: "Ifeoma Okoh"
+     interests: "Low-resource NLP, ASR"
+     website: "ifyokoh.github.io"  # optional
 
 ms_students:
   - name: "Robert J. Chen"
