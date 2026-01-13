@@ -128,13 +128,15 @@
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
                         <div class="card-body">
+                            <div class="person-info">
+                                <h5 class="card-title">{{ person.name }}</h5>
+                                <p class="card-text text-muted">{{ person.role }}</p>
+                                <p class="card-text">{{ person.affiliation }}</p>
+                                <a href="{{ person.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Personal Website</a>
+                            </div>
                             {% if person.photo %}
                             <img src="assets/people/{{ person.photo }}" alt="{{ person.name }}" class="person-photo">
                             {% endif %}
-                            <h5 class="card-title">{{ person.name }}</h5>
-                            <p class="card-text text-muted">{{ person.role }}</p>
-                            <p class="card-text">{{ person.affiliation }}</p>
-                            <a href="{{ person.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Personal Website</a>
                         </div>
                     </div>
                 </div>
@@ -145,14 +147,16 @@
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
                         <div class="card-body">
+                            <div class="person-info">
+                                <h5 class="card-title">{{ member.name }}</h5>
+                                <p class="card-text text-muted">PhD Student</p>
+                                <p class="card-text">{{ member.interests }}</p>
+                                {% if member.website %}
+                                <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Website</a>
+                                {% endif %}
+                            </div>
                             {% if member.photo %}
                             <img src="assets/people/{{ member.photo }}" alt="{{ member.name }}" class="person-photo">
-                            {% endif %}
-                            <h5 class="card-title">{{ member.name }}</h5>
-                            <p class="card-text text-muted">PhD Student</p>
-                            <p class="card-text">{{ member.interests }}</p>
-                            {% if member.website %}
-                            <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Website</a>
                             {% endif %}
                         </div>
                     </div>
@@ -165,14 +169,16 @@
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
                         <div class="card-body">
+                            <div class="person-info">
+                                <h5 class="card-title">{{ member.name }}</h5>
+                                <p class="card-text text-muted">MS Student</p>
+                                <p class="card-text">{{ member.interests }}</p>
+                                {% if member.website %}
+                                <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Website</a>
+                                {% endif %}
+                            </div>
                             {% if member.photo %}
                             <img src="assets/people/{{ member.photo }}" alt="{{ member.name }}" class="person-photo">
-                            {% endif %}
-                            <h5 class="card-title">{{ member.name }}</h5>
-                            <p class="card-text text-muted">MS Student</p>
-                            <p class="card-text">{{ member.interests }}</p>
-                            {% if member.website %}
-                            <a href="{{ member.website }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Website</a>
                             {% endif %}
                         </div>
                     </div>

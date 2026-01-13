@@ -103,6 +103,15 @@ section.bg-light {
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
+.person-card .card-body {
+    display: flex;
+    align-items: center;
+}
+
+.person-card .person-info {
+    flex: 1;
+}
+
 .person-card .card-title {
     color: #001E5F;
     font-weight: 600;
@@ -110,13 +119,12 @@ section.bg-light {
 }
 
 .person-photo {
-    float: right;
-    width: 70px;
-    height: 70px;
+    width: 40%;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 4px;
     margin-left: 1rem;
-    margin-bottom: 0.5rem;
+    flex-shrink: 0;
 }
 
 /* News Cards */
