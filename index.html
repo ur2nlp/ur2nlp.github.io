@@ -182,11 +182,11 @@
                 {% for project in site.data.projects %}
                 <div class="col-md-6 mb-4">
                     <div class="card project-card h-100">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h4 class="card-title">{{ project.title }}</h4>
                             <p class="card-text">{{ project.description }}</p>
                             {% if project.tags %}
-                            <div class="mt-3">
+                            <div class="mt-auto pt-3">
                                 {% for tag in project.tags %}
                                 {% if forloop.first %}
                                 <span class="badge badge-primary">{{ tag }}</span>
@@ -194,6 +194,13 @@
                                 <span class="badge badge-secondary">{{ tag }}</span>
                                 {% endif %}
                                 {% endfor %}
+                                {% if project.link %}
+                                <a href="{{ project.link }}" class="btn btn-sm btn-outline-primary float-right">Learn more</a>
+                                {% endif %}
+                            </div>
+                            {% elsif project.link %}
+                            <div class="mt-auto pt-3">
+                                <a href="{{ project.link }}" class="btn btn-sm btn-outline-primary">Learn more</a>
                             </div>
                             {% endif %}
                         </div>

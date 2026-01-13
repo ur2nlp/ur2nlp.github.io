@@ -1,0 +1,157 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LAPT - {{ site.title }}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link href="../lab.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar" style="background-color: #252525;">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="../index.html#top">
+                <span class="lab-name">ur2nlp</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#publications">Publications</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero-section" style="padding-top: 120px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="display-4">LAPT</h1>
+                    <p class="lead">Language-Adaptive Pretraining Framework</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section style="padding-top: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+
+                    <h2 class="mb-4">What is LAPT?</h2>
+                    <p class="lead">
+                        LAPT is a ready-to-use toolkit for adapting multilingual language models to new
+                        languages. It handles the engineering so you can focus on your language.
+                    </p>
+                    <p>
+                        Adapting a pretrained model to a new language involves several moving parts:
+                        loading and mixing datasets, optionally training a new tokenizer, initializing
+                        embeddings for new vocabulary, and tracking experiments across different
+                        configurations. LAPT provides a modular framework for all of this, built on
+                        HuggingFace Transformers and Datasets.
+                    </p>
+
+                    <h3 class="mt-5 mb-3">Key Features</h3>
+                    <ul>
+                        <li>
+                            <strong>Flexible data mixing</strong> &mdash; Load from OSCAR, HuggingFace Hub,
+                            or local files. Combine sources with temperature-scaled multinomial sampling
+                            for controlled language ratios.
+                        </li>
+                        <li>
+                            <strong>Vocabulary replacement</strong> &mdash; Optional integration with
+                            <a href="https://github.com/konstantinjdobler/focus" target="_blank" rel="noopener noreferrer">FOCUS</a>
+                            for training target-language tokenizers and initializing embeddings via
+                            FastText, rather than starting from random weights.
+                        </li>
+                        <li>
+                            <strong>Composable configuration</strong> &mdash; Hydra-based YAML configs
+                            make it easy to define dataset mixtures and sweep hyperparameters.
+                        </li>
+                        <li>
+                            <strong>Intelligent caching</strong> &mdash; Selective cache invalidation
+                            speeds up iteration when you're only changing some parameters.
+                        </li>
+                    </ul>
+
+                    <h3 class="mt-5 mb-3">Who is this for?</h3>
+                    <p>
+                        LAPT is designed for researchers and practitioners working on low-resource
+                        language adaptation who want a solid starting point rather than building
+                        training infrastructure from scratch. It's particularly useful if you're:
+                    </p>
+                    <ul>
+                        <li>Adapting a multilingual model (like XGLM or mGPT) to a new target language</li>
+                        <li>Experimenting with vocabulary specialization for better tokenization</li>
+                        <li>Combining data from multiple related languages with controlled sampling</li>
+                    </ul>
+
+                    <h3 class="mt-5 mb-3">Links</h3>
+                    <p>
+                        <a href="https://github.com/ur2nlp/LAPT" class="btn btn-primary mr-2" target="_blank" rel="noopener noreferrer">
+                            GitHub Repository
+                        </a>
+                        <a href="https://aclanthology.org/2024.findings-emnlp.918" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">
+                            Related Paper (EMNLP 2024)
+                        </a>
+                    </p>
+
+                    <h3 class="mt-5 mb-3">Citation</h3>
+                    <p>
+                        If you use LAPT, please cite the repository and the related work on targeted
+                        multilingual adaptation:
+                    </p>
+                    <pre class="bg-light p-3" style="font-size: 0.85rem; overflow-x: auto;"><code>@inproceedings{downey-etal-2024-targeted,
+  title = "Targeted Multilingual Adaptation for Low-resource Language Families",
+  author = "Downey, C. M. and Blevins, Terra and Serai, Dhwani
+            and Parikh, Dwija and Steinert-Threlkeld, Shane",
+  booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
+  year = "2024",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2024.findings-emnlp.918",
+}</code></pre>
+
+                    <div class="mt-5 mb-5">
+                        <a href="../index.html#projects" class="text-muted">&larr; Back to Projects</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="text-muted">
+                UR2NLP Lab &middot; University of Rochester
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Low-Resource ASR - {{ site.title }}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link href="../lab.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar" style="background-color: #252525;">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="../index.html#top">
+                <span class="lab-name">ur2nlp</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#publications">Publications</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="hero-section" style="padding-top: 120px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="display-4">Low-Resource ASR</h1>
+                    <p class="lead">Speech Recognition for Endangered Languages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section style="padding-top: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+
+                    <h2 class="mb-4">The Problem</h2>
+                    <p class="lead">
+                        Modern speech recognition works remarkably well&mdash;if you speak English.
+                    </p>
+                    <p>
+                        Deep learning models like wav2vec 2.0 and Whisper have approached human-level
+                        accuracy for converting speech to text in data-rich languages. But these models
+                        struggle with languages they weren't trained on, even when fine-tuned by
+                        conventional methods. With the vast majority of the world's 7,000+ languages
+                        considered "data-scarce," this limits the reach of speech technology
+                        to a small fraction of the world's linguistic diversity.
+                    </p>
+
+                    <h2 class="mt-5 mb-4">Our Approach</h2>
+                    <p>
+                        This project conducts large-scale experiments to identify methods for rapidly
+                        adapting state-of-the-art ASR models to extremely low-resource languages.
+                        We draw on recordings from the
+                        <a href="https://www.elararchive.org/" target="_blank" rel="noopener noreferrer">Endangered Languages Archive</a>,
+                        testing across a diverse selection of under-documented languages.
+                    </p>
+                    <p>
+                        One avenue we're exploring is <strong>linguistically-informed data pooling</strong>:
+                        grouping languages that share phonetic features during training, so that
+                        they can help each other overcome the data bottleneck that any single
+                        low-resource language faces alone.
+                    </p>
+
+                    <h2 class="mt-5 mb-4">Why It Matters</h2>
+                    <p>
+                        Speech recognition is foundational for many technologies we take for granted:
+                        voice assistants, dictation, captioning, and voice search. For speakers of
+                        endangered languages, these tools could help with documentation, education,
+                        and keeping languages vital in the digital age. Our goal is to find training
+                        methods that make ASR adaptation fast and practical, even with very limited data.
+                    </p>
+
+                    <h2 class="mt-5 mb-4">Support</h2>
+                    <p>
+                        This project is supported by a compute allocation from
+                        <a href="https://www.empireai.edu/" target="_blank" rel="noopener noreferrer">Empire AI</a>,
+                        a New York State initiative providing AI research infrastructure.
+                    </p>
+
+                    <div class="mt-5 mb-5">
+                        <a href="../index.html#projects" class="text-muted">&larr; Back to Projects</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="text-muted">
+                UR2NLP Lab &middot; University of Rochester
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

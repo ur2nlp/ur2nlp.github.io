@@ -7,3 +7,18 @@
 #     - "multilingual NLP"
 #     - "low-resource"
 #   link: "https://project-url.com"  # optional
+
+- title: "LAPT: Language-Adaptive Pretraining"
+  description: "A modular toolkit for adapting multilingual language models to new languages. Handles dataset mixing, vocabulary replacement, and embedding initialization so you can focus on your language, not the infrastructure."
+  tags:
+    - "language adaptation"
+    - "low-resource"
+    - "open-source"
+  link: "projects/lapt.html"
+
+- title: "Low-Resource ASR"
+  description: "Exploring methods for rapidly adapting speech recognition models to endangered and under-documented languages, drawing on recordings from the Endangered Languages Archive."
+  tags:
+    - "speech recognition"
+    - "endangered languages"
+  link: "projects/asr.html"
