@@ -1,5 +1,8 @@
 # Research projects
 # Each entry creates a project card on the website
+#
+# Optional: Add an image by setting 'image' to a filename in assets/images/
+# Images display at 3:1 aspect ratio (non-matching images will be center-cropped)
 
 # - title: "Project Title"
 #   description: "Brief description of the research project, its goals, and current status."
@@ -7,6 +10,7 @@
 #     - "multilingual NLP"
 #     - "low-resource"
 #   link: "https://project-url.com"  # optional
+#   image: "project_image.png"  # optional
 
 - title: "LAPT: Language-Adaptive Pretraining"
   description: "A modular toolkit for adapting multilingual language models to new languages. Handles dataset mixing, vocabulary replacement, and embedding initialization so you can focus on your language, not the infrastructure."

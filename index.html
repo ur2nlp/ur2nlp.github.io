@@ -106,6 +106,9 @@
                         <div class="card-body">
                             <span class="badge badge-date mb-2">{{ item.date | date: "%b %Y" }}</span>
                             <h5 class="card-title">{{ item.title }}</h5>
+                            {% if item.image %}
+                            <img src="assets/images/{{ item.image }}" alt="" class="news-image">
+                            {% endif %}
                             <p class="card-text">{{ item.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
                             {% if item.link %}
                             <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">Read more</a>
@@ -199,6 +202,9 @@
                     <div class="card project-card h-100">
                         <div class="card-body d-flex flex-column">
                             <h4 class="card-title">{{ project.title }}</h4>
+                            {% if project.image %}
+                            <img src="assets/images/{{ project.image }}" alt="" class="project-image">
+                            {% endif %}
                             <p class="card-text">{{ project.description }}</p>
                             {% if project.tags %}
                             <div class="mt-auto pt-3">

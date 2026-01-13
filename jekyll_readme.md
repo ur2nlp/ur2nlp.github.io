@@ -31,6 +31,7 @@ ur2nlp.github.io/
 │   ├── projects.yml     # Research projects
 │   └── publications.yml # Publications
 ├── assets/
+│   ├── images/          # Images for news/projects (optional)
 │   ├── logos/           # Lab logos
 │   └── people/          # Headshot photos (optional)
 ├── index.html           # Main page (uses Liquid templates)
@@ -71,7 +72,10 @@ Edit `_data/projects.yml`:
   tags:
     - "multilingual NLP"
     - "low-resource"
+  image: "project_image.png"  # optional, place in assets/images/
 ```
+
+For images: use 3:1 aspect ratio if possible (non-matching images will be center-cropped).
 
 ### Adding a Publication
 

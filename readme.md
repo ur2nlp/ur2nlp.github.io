@@ -91,7 +91,10 @@ Edit `_data/projects.yml`:
   tags:
     - "multilingual NLP"
     - "low-resource"
+  image: "project_image.png"  # optional
 ```
+
+For project images, place the file in `assets/images/`. Images display at 3:1 aspect ratio (non-matching images will be center-cropped).
 
 **Adding a publication:**
 
