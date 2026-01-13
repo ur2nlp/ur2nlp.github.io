@@ -63,14 +63,23 @@ phd_students:
   - name: "Your Name"
     interests: "Brief description of your research interests"
     website: "https://yourwebsite.com"  # optional
+    photo: "your_name.jpg"  # optional
 
 ms_students:
   - name: "Your Name"
     interests: "Brief description of your research interests"
     website: "https://yourwebsite.com"  # optional
+    photo: "your_name.jpg"  # optional
 ```
 
 Your role (PhD Student, MS Student) is determined by which section you're in. People are displayed in order: PI first, then PhD students (alphabetically), then MS students (alphabetically).
+
+**Adding a headshot (optional):**
+
+1. Use a square image (recommended). Non-square images will be center-cropped to fit.
+2. Name your file clearly (e.g., `jane_doe.jpg`)
+3. Place it in `assets/people/`
+4. Add `photo: "jane_doe.jpg"` to your entry in `_data/people.yml`
 
 **Adding a project:**
 

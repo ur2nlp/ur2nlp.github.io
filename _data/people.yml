@@ -1,12 +1,16 @@
 # Lab members data
 # Jekyll will automatically generate cards on the website
 # People display in order: PI, PhD students (alphabetical), MS students (alphabetical)
+#
+# Optional: Add a square headshot by setting 'photo' to the filename
+# (e.g., photo: "jane_doe.jpg") and placing the image in assets/people/
 
 pi:
   - name: "C.M. Downey"
     role: "Assistant Professor"
     affiliation: "Linguistics and Data Science"
     website: "https://cmdowney88.github.io"
+    photo: "cm_downey.jpg"
 
 phd_students:
    - name: "Ifeoma Okoh"

@@ -30,6 +30,9 @@ ur2nlp.github.io/
 │   ├── people.yml       # Lab members
 │   ├── projects.yml     # Research projects
 │   └── publications.yml # Publications
+├── assets/
+│   ├── logos/           # Lab logos
+│   └── people/          # Headshot photos (optional)
 ├── index.html           # Main page (uses Liquid templates)
 ├── lab.css              # Custom styles
 └── README.md            # This file
@@ -49,9 +52,12 @@ phd_students:
   - name: "Your Name"
     interests: "Your research interests"
     website: "https://yoursite.com"  # optional
+    photo: "your_name.jpg"  # optional, place image in assets/people/
 ```
 
 Your role is determined by which section you're in. People display in order: PI, PhD students (alphabetical), MS students (alphabetical).
+
+For photos: use a square image if possible (non-square images will be center-cropped).
 
 3. Commit and push. GitHub Pages rebuilds automatically.
 

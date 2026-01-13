@@ -128,6 +128,9 @@
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
                         <div class="card-body">
+                            {% if person.photo %}
+                            <img src="assets/people/{{ person.photo }}" alt="{{ person.name }}" class="person-photo">
+                            {% endif %}
                             <h5 class="card-title">{{ person.name }}</h5>
                             <p class="card-text text-muted">{{ person.role }}</p>
                             <p class="card-text">{{ person.affiliation }}</p>
@@ -142,6 +145,9 @@
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
                         <div class="card-body">
+                            {% if member.photo %}
+                            <img src="assets/people/{{ member.photo }}" alt="{{ member.name }}" class="person-photo">
+                            {% endif %}
                             <h5 class="card-title">{{ member.name }}</h5>
                             <p class="card-text text-muted">PhD Student</p>
                             <p class="card-text">{{ member.interests }}</p>
@@ -159,6 +165,9 @@
                 <div class="col-md-4 mb-4">
                     <div class="card person-card">
                         <div class="card-body">
+                            {% if member.photo %}
+                            <img src="assets/people/{{ member.photo }}" alt="{{ member.name }}" class="person-photo">
+                            {% endif %}
                             <h5 class="card-title">{{ member.name }}</h5>
                             <p class="card-text text-muted">MS Student</p>
                             <p class="card-text">{{ member.interests }}</p>

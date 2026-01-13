@@ -109,6 +109,16 @@ section.bg-light {
     margin-bottom: 0.5rem;
 }
 
+.person-photo {
+    float: right;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
 /* News Cards */
 .news-card {
     border: none;
