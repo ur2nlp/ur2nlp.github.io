@@ -8,6 +8,12 @@
 #   paper_url: "https://arxiv.org/..."  # optional
 #   code_url: "https://github.com/..."  # optional
 
+- title: "Linguistically Informed Evaluation of Multilingual ASR for African Languages"
+  authors: "Fei-Yueh Chen, Lateef Adeleke, C.M. Downey"
+  venue: "7th Workshop on African Natural Language Processing (AfricaNLP)"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2602.04716"
+
 - title: "Targeted Multilingual Adaptation for Low-resource Language Families"
   authors: "C.M. Downey, Terra Blevins, Dhwani Serai, Dwija Parikh, Shane Steinert-Threlkeld"
   venue: "Findings of EMNLP"

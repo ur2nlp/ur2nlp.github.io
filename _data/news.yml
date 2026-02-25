@@ -9,6 +9,15 @@
 #   link: (optional) URL for more information
 #   image: (optional) filename in assets/images/, displayed as square
 
+- date: 2026-02-06
+  title: "Invited Talk at University at Buffalo"
+  summary: "Prof. Downey gave an invited talk at the University at Buffalo Department of Linguistics on computational tools for under-resourced and endangered languages."
+
+- date: 2026-02-05
+  title: "Paper Selected for AfricaNLP 2026"
+  summary: "Work by Fei-Yueh Chen (MS Linguistics), Lateef Adeleke (PhD Linguistics), and C.M. Downey on linguistically informed evaluation of multilingual ASR for African languages has been selected to appear at the AfricaNLP workshop."
+  link: "https://arxiv.org/abs/2602.04716"
+
 - date: 2025-12-19
   title: "Empire AI Compute Allocation Awarded"
   summary: "Our project on rapid adaptation of ASR models in data-scarce scenarios received 5,000 service units on [Empire AI](https://www.empireai.edu/) Beta."
